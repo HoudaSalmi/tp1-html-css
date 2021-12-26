@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affiche</title>
+    <link rel="stylesheet" href="Houda Salmi tp1.css">
+ 
+</head>
+<body> 
+<!-------------------research bar--------------------->  
+    <div class="searchbox">
+        <form action="">
+           <input type="text" placeholder="Rechercher"  id="search"/>
+           <button type="button" id="btn"><img src="iconrecherche.png"></button>
+       </form>
+   </div>
+
+   <script>
+       let btn=document.getElementById('btn');
+       btn.addEventListener('click',(e)=>{
+           e.preventDefault;
+           let search = document.getElementById('search');
+           let searchwidth=search.offsetWidth;
+           if(searchwidth===0){
+               btn.style.transform='rotateZ(90deg)';
+               search.style.width='100%';
+               setTimeout(()=>{search.style.height='40px';
+               search.style.padding='10px 20px 10px 70px';},500)
+           }
+           else if (searchwidth===350){
+               btn.style.transform='rotateZ(360deg)';
+               search.style.height='0';
+               search.style.padding='0';
+               setTimeout(()=>{search.style.width='0';},500)
+           }
+           console.log(searchwidth);
+       })
+   </script>
+<!-------fin bar de recherche------->
+<div class="container">
+    
+ 
+    <div class="outer">
+        <div class="inner un"><img src="logo.png"/></div>
+        <div class="inner deux"><button><a href="#carousels">Acceuil</a></button></div>
+        <div class="inner trois"><button><a href="#cells">Services</a></button></div>
+        <div class="inner quatre"><button><a href="#cont">Contacts</a></button></div>
+        <h2 id="description">Nous sommes une société de conseil en finance et en technologie de l'information en pleine croissance et prospère, jouissant d'une excellente réputation auprès du personnel et des clients. Nous travaillons en étroite collaboration avec nos clients financiers pour créer des solutions logicielles sur mesure pour soutenir leurs objectifs commerciaux. En raison de la croissance continue.</h2>
+        <h4>  “Good strategy works by focusing energy and resources on one, or a very few, pivotal objectives whose accomplishment will lead to a cascade of favorable outcomes.”
+            – Richard Rumelt</h4>
+    </div>
+ <!------------------fin button début carousels------------------------->
+    <div id="carousels" class="carousel">
+        <div class="carousel-inner">
+            <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
+            <div class="carousel-item">
+                <img src="carousel1.png">
+            </div>
+            <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+            <div class="carousel-item">
+                <img src="carousel2.png">
+            </div>
+            <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+            <div class="carousel-item">
+                <img src="carousel3.jfif">
+            </div>
+            <label for="carousel-3" class="carousel-control prev control-1">‹</label>
+            <label for="carousel-2" class="carousel-control next control-1">›</label>
+            <label for="carousel-1" class="carousel-control prev control-2">‹</label>
+            <label for="carousel-3" class="carousel-control next control-2">›</label>
+            <label for="carousel-2" class="carousel-control prev control-3">‹</label>
+            <label for="carousel-1" class="carousel-control next control-3">›</label>
+            <ol class="carousel-indicators">
+                <li>
+                    <label for="carousel-1" class="carousel-bullet">•</label>
+                </li>
+                <li>
+                    <label for="carousel-2" class="carousel-bullet">•</label>
+                </li>
+                <li>
+                    <label for="carousel-3" class="carousel-bullet">•</label>
+                </li>
+            </ol>
+        </div>
+    </div>
+    <!-----------------------fin carousels début services------------------->
+    <h2 id="cells" style="color: black;">Nos services:</h2>
+    <div  class="cards" style="color: white;">
+     <div class="desc d1">
+        <div class="card un"><img src="1.jpg" alt=""/></div>
+        <div class="card deux">
+            <h4>Conseil en informatique</h4>
+            <p>Chez BARAMBOX, la Data est au centre de notre vocation. Notre métier est de faire parler l’information pour améliorer la performance de nos client et leur apporter les solutions à leurs problématiques.On vous accompagne dans vos projets Data de bout en bout, du cadrage du besoin jusqu’ à l’implémentation, en s’appuyant sur l’expertise du cabinet et de nos consultants dans toute la chaine de valeur Data.</p>
+            <button>voir plus</button>
+        </div>
+    </div>
+    <div class="desc d2">
+        <div class="card un"><img src="2.jpg" alt=""/></div>
+        <div class="card deux">
+            <h4>Conseil en Finance</h4>
+            <p>Un cabinet de conseil spécialisé en finance de marché est doté à la fois des compétences technologiques et financières. Il s’agit ainsi d’une SSII intervenant dans les secteurs bancaires et investissement et il assure des missions MOA et MOE.Les consultants de ce cabinet sont en principe de formation ingénieur ayant acquis des expertises fonctionnelles en finance de marché. Ils peuvent assumer diverses prestations en lien avec l’investment banking et l’asset management, et accompagner les clients dans le pilotage de leurs projets.</p>
+            <button>voir plus</button>
+        </div>
+    </div>
+    </div>
+<!---------------------------------équipe--------------------------------------->
+    <h2 style="color: black;">Notre équipe:</h2>
+    <div id="eqp"class="equipe" style="color: white;">
+        
+        <div class="membre m1">
+            <img src="photo1.png"/>
+            <h3>Mme. Ada TIMOUR</h3>
+            <p>She worked with Charles Babbage on his calculating machines – he called her the “enchantress of numbers”. At the time few women studied science or maths, and she is widely considered the founder of computing science and the world's first computer programmer.The laying of the cable having been successfully accomplished, and the object in view attained, the 'Great Eastern' was once more left in her costly idleness. A French company, called the 'Great Eastern Company, Limited,' was floated with a capital of 2,000,000 francs, with the intention of employing the immense ship for the conveyance of passengers across the Atlantic.After having left the Doctor, I spent the rest of the day with Fabian; we had gone to the stern, which Pitferge called 'walking in the country.</p>
+         </div>
+         <div class="membre m2">
+            <img src="photo2.png"/>
+            <h3>Mr. Ali AFRAH</h3>
+            <p>Bachelor of Science degrees in math and computer science.Entrepreneur; co-founded Open Text Corporation, Textuality and Antarctica Systems.Developer's tool.Below us, at a distance of forty feet, the screw was beating the water with a tremendous force, making its copper gleam in the midst of what appeared to be a vast conglomeration of liquefied emeralds, the fleecy track extending as far as the eye could reach, mingled in a milky path the foam from the screw, and the paddle engines, whilst the white and black fringed plumage of the sea-gulls flying above, cast rapid shadows over the sea.
+
+                     ls did not come up to her bulwarks.</p>
+                 
+         </div>
+         <div class="membre m3">
+            <img src="femme.png"/>
+            <h3>Mme. Chan Dai</h3>
+            <p>IT Specialist has the following responsibilities: Review diagnostics and assess the functionality and efficiency of systems. Implement security measures. Monitor security certificates and company compliance of requirements. Offer technical support to company staff and troubleshoot computer problems.conglomeration of liquefied emeralds, the fleecy track extending as far as the eye could reach, mingled in a milky path the foam from the screw, and the paddle engines, whilst the white and black fringed plumage of the sea-gulls flying above, cast rapid shadows over the sea.
+
+                    ls did not come up to her bulwarks.</p>
+                
+        </div>
+        <div class="membre m4">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSelqzk6knSE-KtYHcUZbZcGnhsamoo5LVd_Q&usqp=CAU"/>
+            <h3>Mr.Anthony Melendese</h3>
+            <p>Diplômé d’un Doctorat Expert en Contrôle de Gestion, Audit et Gestion de Système d’Information.
+
+                Au fil des années, j'ai eu l'opportunité de cumuler plusieurs expériences dans plusieurs domaines différents, ce qui m'a permis de développer et de mettre en avant mes compétences techniques et personnelles. 
+                
+                Etre un consultant en finance consiste à être en étroite relation, directement avec la direction générale d’une entreprise cliente ou avec la direction financière de la société qui l’a embauchée. 
+
+                    </p>
+                
+        </div>
+    </div>
+         </div>
+<!------------------------------------contacts and map----------------------->
+         <div class="last">
+         <div id="cont" class="last un">
+            
+            <div class="contacts">
+                <div class="telephone">
+                    <img src="https://img.icons8.com/nolan/64/apple-phone.png"/>
+                    <p style="color: black;">0535575638</p>
+                </div>
+                <div class="mail">
+                    <img src="https://img.icons8.com/nolan/64/apple-mail.png"/>
+                    <p style="color: black;">Barambox.contact@gmail.com</p>
+                </div>
+                <div class="localisation">
+                    <img src="https://img.icons8.com/nolan/64/user-location.png"/>
+                    <p style="color: black;">Bd Dammam, Casablanca</p>
+                </div>
+                <p style="color: black;">-----------------------</p>
+                <div class="reseaux" style="color: black;">
+                    <div class="fb">
+                        <a><img src="https://img.icons8.com/nolan/64/facebook.png"/><strong>BARAMBOX</strong></a>
+                    </div>
+                    <div class="ig">
+                        <a><img src="https://img.icons8.com/nolan/64/instagram-new.png"/><strong>Barambox</strong></a>
+                        
+                    </div>
+                    <div class="linkedin">
+                        <a><img src="https://img.icons8.com/nolan/64/linkedin.png"/><strong>BARAMBOX</strong></a>
+                        
+                    </div>
+                    
+                   
+                </div>
+            </div>
+         
+         </div>
+         <div class="last deux">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13301.590177700018!2d-7.6403118!3d33.543046!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7fd591c903d578a8!2sTechnopark!5e0!3m2!1sfr!2sma!4v1637879494505!5m2!1sfr!2sma" style="border:0;" allowfullscreen="" loading="lazy" ></iframe>
+        </div>
+        </div>
+        
+        
+        
+         
+
+    
+         
+         
+         
+</div>
+</body>
